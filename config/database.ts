@@ -1,14 +1,13 @@
 import path from 'path';
 
+import { parse } from 'pg-connection-string';
+
 export default ({ env }) => {
   const client = env('DATABASE_CLIENT', 'sqlite');
-
-  const parse = require('pg-connection-string').parse;
-
   const { host, port, database, user, password } = parse(
     env(
       'DATABASE_URL',
-      'postgresql://user:pass@host:port/dbname?sslmode=require'
+      'postgresql://username:password@host:1111/dbname?sslmode=require'
     )
   );
 
