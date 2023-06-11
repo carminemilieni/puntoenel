@@ -7,7 +7,7 @@
     "develop": "strapi develop",
     "devlop-watch": "strapi develop --watch-admin",
     "start": "strapi start",
-    "build": "strapi build",
+    "build": "yarn --cwd ./src/plugins/report build && strapi build",
     "strapi": "strapi",
     "lint": "eslint **/*.ts",
     "prettier-format": "prettier --config .prettierrc '**/*.ts' --write"
