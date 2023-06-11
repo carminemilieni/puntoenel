@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "operazioni",
+  "info": {
+    "singularName": "operazione",
+    "pluralName": "operazioni",
+    "displayName": "Operazione",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "offerta": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::offerta.offerta",
+      "inversedBy": "operazioni"
+    },
+    "tipoOperazione": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::tipo-operazione.tipo-operazione",
+      "inversedBy": "operazioni"
+    },
+    "ufficio": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::ufficio.ufficio",
+      "inversedBy": "operazioni"
+    }
+  }
+}

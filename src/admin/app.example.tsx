@@ -9,7 +9,7 @@ export default {
       // 'es',
       // 'he',
       // 'id',
-      // 'it',
+      'it'
       // 'ja',
       // 'ko',
       // 'ms',
@@ -27,9 +27,9 @@ export default {
       // 'vi',
       // 'zh-Hans',
       // 'zh',
-    ],
+    ]
   },
   bootstrap(app) {
     console.log(app);
-  },
+  }
 };

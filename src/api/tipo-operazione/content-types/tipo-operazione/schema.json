@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tipo_operazioni",
+  "info": {
+    "singularName": "tipo-operazione",
+    "pluralName": "tipo-operazioni",
+    "displayName": "Tipo Operazione",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "valore": {
+      "type": "float",
+      "required": true,
+      "min": 0
+    },
+    "operazioni": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::operazione.operazione",
+      "mappedBy": "tipoOperazione"
+    }
+  }
+}

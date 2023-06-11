@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "uffici",
+  "info": {
+    "singularName": "ufficio",
+    "pluralName": "uffici",
+    "displayName": "Ufficio",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "ufficio"
+    },
+    "operazioni": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::operazione.operazione",
+      "mappedBy": "ufficio"
+    }
+  }
+}
